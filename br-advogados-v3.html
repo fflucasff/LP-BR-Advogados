@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="BR Advogados Associados — Direito Previdenciário e Social. Dr. Biovane Ribeiro. São Lourenço, MG. OAB/SP 350.938 | OAB/MG 162.402"/>
+<title>BR Advogados Associados — Biovane Ribeiro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+<style>
+/* ─────────────────────────────────────────
+   TOKENS
+───────────────────────────────────────── */
+:root{
+  --ink:      #0d0d0d;
+  --ink2:     #141414;
+  --ink3:     #1c1c1c;
+  --ink4:     #252525;
+  --gold:     #b8933a;
+  --gold2:    #d4aa52;
+  --gold3:    #8a6b25;
+  --gold-dim: rgba(184,147,58,.14);
+  --white:    #f4f1eb;
+  --cream:    #ede9df;
+  --warm:     #e8e2d6;
+  --muted:    #7a7570;
+  --muted2:   #5a5550;
+  --rule:     rgba(184,147,58,.2);
+  --ff-disp:  'Cormorant Garamond', Georgia, serif;
+  --ff-body:  'Outfit', sans-serif;
+  --ease:     cubic-bezier(.22,1,.36,1);
+  --ease2:    cubic-bezier(.4,0,.2,1);
+}
+
+/* ─────────────────────────────────────────
+   BASE
+───────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  background:var(--ink);
+  color:var(--white);
+  font-family:var(--ff-body);
+  font-weight:300;
+  line-height:1.65;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--gold);color:var(--ink)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ─────────────────────────────────────────
+   SCROLLBAR
+───────────────────────────────────────── */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--ink2)}
+::-webkit-scrollbar-thumb{background:var(--gold3)}
+
+/* ─────────────────────────────────────────
+   LAYOUT
+───────────────────────────────────────── */
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 40px}
+.wrap--narrow{max-width:900px}
+.wrap--wide{max-width:1400px}
+
+/* ─────────────────────────────────────────
+   TYPOGRAPHY HELPERS
+───────────────────────────────────────── */
+.label{
+  font-family:var(--ff-body);
+  font-size:.68rem;
+  font-weight:500;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+.display{
+  font-family:var(--ff-disp);
+  line-height:1.05;
+  letter-spacing:-.01em;
+}
+.rule-gold{
+  width:40px;height:1px;background:var(--gold);
+  display:inline-block;vertical-align:middle;margin-right:14px;
+}
+
+/* ─────────────────────────────────────────
+   BUTTONS
+───────────────────────────────────────── */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--ff-body);font-weight:500;
+  font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:14px 32px;cursor:pointer;border:none;
+  transition:all .3s var(--ease);white-space:nowrap;
+}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 12px 32px rgba(184,147,58,.25)}
+.btn-outline{background:transparent;color:var(--white);border:1px solid rgba(244,241,235,.25)}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+.btn svg{flex-shrink:0}
+
+/* ─────────────────────────────────────────
+   REVEAL ANIMATIONS
+───────────────────────────────────────── */
+.r{opacity:0;transform:translateY(32px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.r.in{opacity:1;transform:translateY(0)}
+.r-left{opacity:0;transform:translateX(-40px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.r-left.in{opacity:1;transform:translateX(0)}
+.r-right{opacity:0;transform:translateX(40px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.r-right.in{opacity:1;transform:translateX(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+.d4{transition-delay:.4s}.d5{transition-delay:.5s}.d6{transition-delay:.6s}
+
+/* ─────────────────────────────────────────
+   GRAIN OVERLAY
+───────────────────────────────────────── */
+body::after{
+  content:'';
+  position:fixed;inset:0;z-index:9999;
+  pointer-events:none;
+  opacity:.025;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:200px 200px;
+}
+
+/* ─────────────────────────────────────────
+   NAV
+───────────────────────────────────────── */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:500;
+  transition:background .4s var(--ease2),padding .4s var(--ease2),border-color .4s;
+  padding:28px 0;
+  border-bottom:1px solid transparent;
+}
+#nav.stuck{
+  background:rgba(13,13,13,.94);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  padding:18px 0;
+  border-color:var(--rule);
+}
+#nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav-brand{display:flex;align-items:center;gap:14px}
+.nav-brand-text{font-family:var(--ff-disp);font-size:1.15rem;font-weight:600;line-height:1.15}
+.nav-brand-text small{
+  display:block;font-family:var(--ff-body);font-size:.6rem;
+  font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-top:1px;
+}
+.nav-menu{display:flex;align-items:center;gap:36px;list-style:none}
+.nav-menu a{
+  font-size:.78rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(244,241,235,.55);transition:color .2s;
+}
+.nav-menu a:hover{color:var(--white)}
+.nav-cta{font-size:.76rem!important;padding:10px 24px!important}
+.nav-burger{
+  display:none;flex-direction:column;gap:5px;
+  background:none;border:none;cursor:pointer;padding:4px;
+}
+.nav-burger span{display:block;width:22px;height:1.5px;background:var(--white);transition:all .3s}
+
+/* ─────────────────────────────────────────
+   MOBILE NAV
+───────────────────────────────────────── */
+.mob-overlay{
+  display:none;position:fixed;inset:0;z-index:400;
+  background:var(--ink2);
+  flex-direction:column;align-items:center;justify-content:center;gap:28px;
+}
+.mob-overlay.open{display:flex}
+.mob-overlay a{
+  font-family:var(--ff-disp);font-size:2rem;font-weight:400;
+  color:var(--white);transition:color .2s;letter-spacing:.02em;
+}
+.mob-overlay a:hover{color:var(--gold)}
+.mob-close{
+  position:absolute;top:24px;right:28px;
+  background:none;border:none;cursor:pointer;
+  color:var(--white);font-size:1.5rem;font-family:var(--ff-disp);
+}
+.mob-sub{font-size:.7rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+
+/* ─────────────────────────────────────────
+   HERO
+───────────────────────────────────────── */
+#hero{
+  position:relative;min-height:100svh;
+  display:grid;grid-template-columns:1fr 1fr;
+  align-items:end;overflow:hidden;
+}
+
+/* gold vertical line accent */
+#hero::before{
+  content:'';position:absolute;
+  top:0;left:50%;transform:translateX(-50%);
+  width:1px;height:100%;
+  background:linear-gradient(to bottom,transparent,var(--rule) 30%,var(--rule) 70%,transparent);
+  pointer-events:none;
+}
+
+.hero-left{
+  position:relative;z-index:2;
+  padding:160px 60px 80px 40px;
+  display:flex;flex-direction:column;
+  justify-content:flex-end;
+  min-height:100svh;
+}
+.hero-eyebrow{
+  display:flex;align-items:center;gap:0;
+  margin-bottom:28px;
+}
+.hero-h1{
+  font-family:var(--ff-disp);
+  font-size:clamp(2.8rem,4.5vw,5rem);
+  font-weight:300;
+  line-height:1.08;
+  letter-spacing:-.02em;
+  margin-bottom:28px;
+  color:var(--white);
+}
+.hero-h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{
+  font-size:clamp(.88rem,1.2vw,1rem);
+  font-weight:300;
+  color:rgba(244,241,235,.55);
+  max-width:400px;
+  line-height:1.75;
+  margin-bottom:44px;
+}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:56px}
+.hero-stats{
+  display:flex;gap:40px;
+  padding-top:32px;
+  border-top:1px solid var(--rule);
+}
+.stat-num{
+  font-family:var(--ff-disp);font-size:2rem;font-weight:300;
+  color:var(--gold);line-height:1;margin-bottom:4px;
+}
+.stat-label{font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* hero right — photo side */
+.hero-right{
+  position:relative;height:100svh;overflow:hidden;
+}
+.hero-photo{
+  width:100%;height:100%;object-fit:cover;object-position:center top;
+  filter:grayscale(20%) contrast(1.05);
+  transform:scale(1.03);
+  transition:transform 8s ease;
+}
+.hero-right:hover .hero-photo{transform:scale(1)}
+.hero-photo-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to right,var(--ink) 0%,transparent 30%),
+             linear-gradient(to top,var(--ink) 0%,transparent 40%);
+}
+/* floating oab badge */
+.oab-badge{
+  position:absolute;bottom:48px;right:40px;
+  background:rgba(13,13,13,.85);
+  backdrop-filter:blur(12px);
+  border:1px solid var(--rule);
+  padding:16px 22px;
+  text-align:right;
+}
+.oab-badge .label{display:block;margin-bottom:6px;font-size:.58rem}
+.oab-badge p{font-family:var(--ff-disp);font-size:.95rem;font-weight:500;line-height:1.5;color:var(--cream)}
+
+/* scroll hint */
+.scroll-hint{
+  position:absolute;bottom:36px;left:40px;z-index:3;
+  display:flex;align-items:center;gap:10px;
+  font-size:.65rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);
+}
+.scroll-line{
+  width:32px;height:1px;background:var(--gold);
+  transform-origin:left;animation:scrollAnim 2s ease-in-out infinite;
+}
+@keyframes scrollAnim{0%,100%{width:32px}50%{width:56px}}
+
+/* ─────────────────────────────────────────
+   MARQUEE STRIP
+───────────────────────────────────────── */
+.marquee-strip{
+  background:var(--gold);overflow:hidden;
+  padding:14px 0;white-space:nowrap;
+}
+.marquee-inner{
+  display:inline-flex;gap:0;
+  animation:marquee 28s linear infinite;
+}
+.marquee-inner span{
+  font-family:var(--ff-disp);font-size:1rem;font-weight:400;
+  font-style:italic;color:var(--ink);
+  padding:0 36px;
+}
+.marquee-inner span::before{
+  content:'◆';margin-right:36px;font-style:normal;font-size:.6rem;opacity:.6;
+}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ─────────────────────────────────────────
+   AUTORIDADE
+───────────────────────────────────────── */
+#autoridade{padding:120px 0;background:var(--ink2)}
+.auto-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;
+}
+.auto-left{}
+.auto-left .label{margin-bottom:20px;display:block}
+.auto-h2{
+  font-family:var(--ff-disp);
+  font-size:clamp(2rem,3vw,3.2rem);
+  font-weight:300;line-height:1.15;
+  margin-bottom:24px;
+}
+.auto-h2 em{font-style:italic;color:var(--gold)}
+.auto-text{
+  font-size:.95rem;font-weight:300;
+  color:rgba(244,241,235,.55);line-height:1.8;
+  margin-bottom:32px;
+}
+.auto-credentials{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:1px;background:var(--rule);
+  margin-top:48px;border:1px solid var(--rule);
+}
+.cred-item{
+  background:var(--ink2);padding:24px 28px;
+  transition:background .3s;
+}
+.cred-item:hover{background:rgba(184,147,58,.05)}
+.cred-item .label{font-size:.58rem;margin-bottom:8px;display:block}
+.cred-item p{font-family:var(--ff-disp);font-size:1.05rem;font-weight:500;color:var(--cream)}
+/* right — escritório photo placeholder */
+.auto-right{position:relative}
+.img-frame{
+  position:relative;
+  aspect-ratio:4/5;overflow:hidden;
+  border:1px solid var(--rule);
+}
+.img-frame img,.img-placeholder{
+  width:100%;height:100%;
+  object-fit:cover;object-position:center;
+  display:block;
+}
+.img-placeholder{
+  background:var(--ink3);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:12px;color:var(--muted);
+  font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+}
+.img-placeholder svg{opacity:.2}
+/* corner accents */
+.img-frame::before,.img-frame::after{
+  content:'';position:absolute;
+  width:28px;height:28px;border-color:var(--gold);border-style:solid;
+  z-index:2;pointer-events:none;
+}
+.img-frame::before{top:-1px;left:-1px;border-width:2px 0 0 2px}
+.img-frame::after{bottom:-1px;right:-1px;border-width:0 2px 2px 0}
+.img-offset-badge{
+  position:absolute;top:-24px;right:-24px;
+  background:var(--gold);color:var(--ink);
+  padding:20px 24px;text-align:center;
+  font-family:var(--ff-disp);
+}
+.img-offset-badge strong{display:block;font-size:2rem;font-weight:600;line-height:1}
+.img-offset-badge span{font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase}
+
+/* ─────────────────────────────────────────
+   ÁREAS
+───────────────────────────────────────── */
+#areas{padding:120px 0}
+.areas-header{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:60px;align-items:end;margin-bottom:72px;
+}
+.areas-header .label{display:block;margin-bottom:18px}
+.areas-h2{
+  font-family:var(--ff-disp);
+  font-size:clamp(2rem,3vw,3.2rem);
+  font-weight:300;line-height:1.1;
+}
+.areas-h2 em{font-style:italic;color:var(--gold)}
+.areas-desc{
+  font-size:.92rem;font-weight:300;color:rgba(244,241,235,.5);
+  line-height:1.8;align-self:end;
+}
+.areas-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--rule);
+  border:1px solid var(--rule);
+}
+.area-card{
+  background:var(--ink);
+  padding:44px 36px 40px;
+  position:relative;overflow:hidden;
+  transition:background .35s var(--ease2);
+  cursor:default;
+}
+.area-card::after{
+  content:'';position:absolute;
+  left:0;bottom:0;
+  width:0;height:2px;
+  background:var(--gold);
+  transition:width .5s var(--ease);
+}
+.area-card:hover{background:var(--ink2)}
+.area-card:hover::after{width:100%}
+.area-num{
+  font-family:var(--ff-disp);
+  font-size:3.5rem;font-weight:300;
+  color:rgba(184,147,58,.1);line-height:1;
+  margin-bottom:20px;
+  transition:color .35s;
+}
+.area-card:hover .area-num{color:rgba(184,147,58,.18)}
+.area-icon{
+  width:40px;height:40px;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--rule);color:var(--gold);
+  margin-bottom:20px;
+  transition:background .3s,border-color .3s;
+}
+.area-card:hover .area-icon{background:var(--gold-dim);border-color:var(--gold)}
+.area-title{
+  font-family:var(--ff-disp);font-size:1.25rem;font-weight:500;
+  margin-bottom:12px;line-height:1.3;
+}
+.area-text{font-size:.85rem;font-weight:300;color:rgba(244,241,235,.45);line-height:1.75}
+
+/* ─────────────────────────────────────────
+   SOBRE — ADVOGADO
+───────────────────────────────────────── */
+#sobre{padding:120px 0;background:var(--ink2)}
+.sobre-grid{
+  display:grid;grid-template-columns:5fr 7fr;
+  gap:0;align-items:stretch;
+}
+.sobre-photo-col{position:relative;overflow:hidden;min-height:640px}
+.sobre-photo-col .img-frame{
+  height:100%;aspect-ratio:auto;border:none;border-right:1px solid var(--rule);
+}
+.sobre-text-col{padding:80px 72px}
+.sobre-text-col .label{display:block;margin-bottom:20px}
+.sobre-name{
+  font-family:var(--ff-disp);
+  font-size:clamp(2rem,3.5vw,3.8rem);
+  font-weight:300;line-height:1.05;
+  letter-spacing:-.01em;margin-bottom:8px;
+}
+.sobre-name em{font-style:italic;color:var(--gold)}
+.sobre-title{
+  font-size:.78rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:36px;
+}
+.sobre-bio{
+  font-size:.96rem;font-weight:300;
+  color:rgba(244,241,235,.6);line-height:1.85;
+  margin-bottom:40px;
+}
+.sobre-bio strong{color:var(--cream);font-weight:500}
+.sobre-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:44px}
+.tag{
+  border:1px solid var(--rule);
+  padding:6px 16px;
+  font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);transition:border-color .2s,color .2s;
+}
+.tag:hover{border-color:var(--gold);color:var(--gold)}
+.sobre-divider{width:48px;height:1px;background:var(--gold);margin-bottom:40px}
+.sobre-quote{
+  font-family:var(--ff-disp);font-size:1.35rem;font-weight:300;
+  font-style:italic;color:rgba(244,241,235,.45);
+  line-height:1.6;border-left:2px solid var(--gold);
+  padding-left:24px;
+}
+
+/* ─────────────────────────────────────────
+   DIFERENCIAIS
+───────────────────────────────────────── */
+#diferenciais{padding:120px 0}
+.dif-header{margin-bottom:72px}
+.dif-header .label{display:block;margin-bottom:16px}
+.dif-h2{
+  font-family:var(--ff-disp);
+  font-size:clamp(2rem,3vw,3.2rem);
+  font-weight:300;line-height:1.1;
+  max-width:640px;
+}
+.dif-h2 em{font-style:italic;color:var(--gold)}
+.dif-list{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:1px;background:var(--rule);border:1px solid var(--rule);
+}
+.dif-item{
+  background:var(--ink);
+  padding:44px 48px;
+  display:grid;grid-template-columns:48px 1fr;
+  gap:24px;align-items:start;
+  transition:background .3s;
+}
+.dif-item:hover{background:rgba(184,147,58,.04)}
+.dif-num{
+  font-family:var(--ff-disp);font-size:2.2rem;font-weight:300;
+  color:var(--gold3);line-height:1;padding-top:4px;
+}
+.dif-content h3{
+  font-family:var(--ff-disp);font-size:1.2rem;font-weight:500;
+  margin-bottom:10px;line-height:1.25;
+}
+.dif-content p{font-size:.87rem;font-weight:300;color:rgba(244,241,235,.45);line-height:1.75}
+
+/* ─────────────────────────────────────────
+   VÍDEO
+───────────────────────────────────────── */
+#video{
+  padding:120px 0;background:var(--ink2);
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+}
+.video-inner{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;
+}
+.video-text .label{display:block;margin-bottom:20px}
+.video-h2{
+  font-family:var(--ff-disp);
+  font-size:clamp(1.8rem,3vw,3rem);
+  font-weight:300;line-height:1.15;
+  margin-bottom:20px;
+}
+.video-h2 em{font-style:italic;color:var(--gold)}
+.video-sub{
+  font-size:.9rem;font-weight:300;color:rgba(244,241,235,.45);
+  line-height:1.8;margin-bottom:36px;
+}
+.video-frame{
+  position:relative;aspect-ratio:16/9;overflow:hidden;
+  border:1px solid var(--rule);cursor:pointer;
+}
+.video-frame iframe{width:100%;height:100%;border:none}
+.video-thumb{
+  position:absolute;inset:0;
+  background:var(--ink3);
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity .4s;
+}
+.video-thumb.hidden{opacity:0;pointer-events:none}
+.play-btn{
+  width:72px;height:72px;
+  background:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .25s var(--ease),background .25s;
+}
+.play-btn:hover{background:var(--gold2);transform:scale(1.08)}
+.video-corner::before,.video-corner::after{
+  content:'';position:absolute;
+  width:24px;height:24px;border-color:var(--gold);border-style:solid;
+  pointer-events:none;z-index:2;
+}
+.video-corner::before{top:-1px;left:-1px;border-width:2px 0 0 2px}
+.video-corner::after{bottom:-1px;right:-1px;border-width:0 2px 2px 0}
+
+/* ─────────────────────────────────────────
+   EQUIPE / ESCRITÓRIO
+───────────────────────────────────────── */
+#estrutura{padding:120px 0}
+.estrutura-header{margin-bottom:64px}
+.estrutura-header .label{display:block;margin-bottom:16px}
+.estrutura-h2{
+  font-family:var(--ff-disp);
+  font-size:clamp(2rem,3vw,3.2rem);
+  font-weight:300;line-height:1.1;
+}
+.estrutura-h2 em{font-style:italic;color:var(--gold)}
+/* gallery mosaic */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  grid-template-rows:280px 280px;
+  gap:1px;background:var(--rule);
+  border:1px solid var(--rule);
+}
+.gal-item{overflow:hidden;position:relative}
+.gal-item:nth-child(1){grid-column:1/6;grid-row:1/2}
+.gal-item:nth-child(2){grid-column:6/9;grid-row:1/2}
+.gal-item:nth-child(3){grid-column:9/13;grid-row:1/2}
+.gal-item:nth-child(4){grid-column:1/5;grid-row:2/3}
+.gal-item:nth-child(5){grid-column:5/9;grid-row:2/3}
+.gal-item:nth-child(6){grid-column:9/13;grid-row:2/3}
+.gal-item img,.gal-placeholder{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .7s var(--ease);
+}
+.gal-item:hover img,.gal-item:hover .gal-placeholder-inner{transform:scale(1.05)}
+.gal-placeholder{
+  background:var(--ink3);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:10px;color:var(--muted);font-size:.68rem;
+  letter-spacing:.12em;text-transform:uppercase;
+}
+.gal-placeholder svg{opacity:.15}
+.gal-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(13,13,13,.6) 0%,transparent 50%);
+  opacity:0;transition:opacity .3s;
+}
+.gal-item:hover .gal-overlay{opacity:1}
+
+/* ─────────────────────────────────────────
+   CTA FINAL
+───────────────────────────────────────── */
+#cta-final{
+  padding:140px 0;
+  background:var(--ink2);
+  border-top:1px solid var(--rule);
+  position:relative;overflow:hidden;
+  text-align:center;
+}
+#cta-final::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 80% at 50% 50%,rgba(184,147,58,.07) 0%,transparent 70%);
+  pointer-events:none;
+}
+.cta-label{display:block;margin-bottom:24px}
+.cta-h2{
+  font-family:var(--ff-disp);
+  font-size:clamp(2.2rem,4vw,4.5rem);
+  font-weight:300;line-height:1.05;
+  margin-bottom:20px;letter-spacing:-.01em;
+}
+.cta-h2 em{font-style:italic;color:var(--gold)}
+.cta-sub{
+  font-size:.97rem;font-weight:300;
+  color:rgba(244,241,235,.45);max-width:520px;
+  margin:0 auto 48px;line-height:1.8;
+}
+.cta-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+.cta-info{
+  margin-top:48px;padding-top:40px;
+  border-top:1px solid var(--rule);
+  display:flex;justify-content:center;gap:56px;flex-wrap:wrap;
+}
+.cta-info-item{text-align:center}
+.cta-info-item .label{display:block;margin-bottom:6px;font-size:.6rem}
+.cta-info-item p{font-family:var(--ff-disp);font-size:1rem;font-weight:400;color:var(--cream)}
+
+/* ─────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────── */
+#footer{
+  background:var(--ink);
+  border-top:1px solid var(--rule);
+  padding:72px 0 36px;
+}
+.footer-top{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:48px;padding-bottom:56px;
+  border-bottom:1px solid var(--rule);
+}
+.footer-brand p{
+  font-size:.85rem;font-weight:300;
+  color:rgba(244,241,235,.35);line-height:1.75;
+  margin-top:14px;max-width:260px;
+}
+.footer-col h4{
+  font-size:.65rem;font-weight:500;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:18px;
+}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:10px}
+.footer-col ul li a{
+  font-size:.85rem;font-weight:300;
+  color:rgba(244,241,235,.4);transition:color .2s;
+}
+.footer-col ul li a:hover{color:var(--white)}
+.footer-col ul li span{
+  font-size:.85rem;font-weight:300;color:rgba(244,241,235,.4);
+  display:flex;align-items:center;gap:8px;
+}
+.footer-socials{display:flex;gap:10px;margin-top:18px}
+.fsoc{
+  width:34px;height:34px;border:1px solid var(--rule);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--muted);transition:border-color .2s,color .2s;
+}
+.fsoc:hover{border-color:var(--gold);color:var(--gold)}
+.footer-bottom{
+  padding-top:28px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;
+}
+.footer-bottom p{font-size:.72rem;font-weight:300;color:rgba(244,241,235,.2)}
+.footer-oab{font-size:.68rem;font-weight:500;letter-spacing:.08em;color:var(--muted2)}
+
+/* ─────────────────────────────────────────
+   WPP FLOAT
+───────────────────────────────────────── */
+#wpp{
+  position:fixed;bottom:28px;right:28px;z-index:400;
+  display:flex;align-items:center;gap:12px;
+}
+.wpp-tip{
+  background:var(--ink3);border:1px solid var(--rule);
+  padding:9px 16px;font-size:.75rem;font-weight:400;white-space:nowrap;
+  opacity:0;transform:translateX(8px);
+  transition:opacity .3s,transform .3s;pointer-events:none;
+}
+#wpp:hover .wpp-tip{opacity:1;transform:translateX(0)}
+.wpp-circle{
+  width:52px;height:52px;background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;position:relative;
+  box-shadow:0 4px 20px rgba(37,211,102,.3);
+  transition:transform .25s var(--ease),box-shadow .25s;
+}
+.wpp-circle:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(37,211,102,.45)}
+.wpp-ring{
+  position:absolute;top:-3px;right:-3px;
+  width:14px;height:14px;background:var(--gold);
+  border-radius:50%;border:2px solid var(--ink);
+  animation:wppRing 2.5s ease-in-out infinite;
+}
+@keyframes wppRing{0%,100%{transform:scale(1);opacity:1}60%{transform:scale(1.6);opacity:0}}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media(max-width:1100px){
+  .hero-left{padding:140px 40px 60px 28px}
+  .sobre-grid{grid-template-columns:1fr 1fr}
+  .sobre-text-col{padding:56px 48px}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  #hero{grid-template-columns:1fr;min-height:auto}
+  .hero-left{min-height:auto;padding:140px 24px 56px}
+  #hero::before{display:none}
+  .hero-right{height:60vw;min-height:320px}
+  .hero-photo-overlay{background:linear-gradient(to top,var(--ink) 0%,transparent 50%)}
+  .oab-badge{right:20px;bottom:24px}
+  .auto-grid{grid-template-columns:1fr;gap:48px}
+  .areas-header{grid-template-columns:1fr}
+  .areas-grid{grid-template-columns:1fr 1fr}
+  .sobre-grid{grid-template-columns:1fr}
+  .sobre-photo-col{min-height:400px}
+  .sobre-text-col{padding:48px 28px}
+  .dif-list{grid-template-columns:1fr}
+  .video-inner{grid-template-columns:1fr;gap:40px}
+  .gallery{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .gal-item:nth-child(n){grid-column:auto;grid-row:auto}
+  .cta-info{gap:32px}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .nav-menu{display:none}
+  .nav-burger{display:flex}
+  .img-offset-badge{top:-12px;right:-12px;padding:14px 18px}
+  .wrap{padding:0 20px}
+}
+@media(max-width:600px){
+  .areas-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .hero-stats{gap:24px}
+  .hero-btns{flex-direction:column;align-items:flex-start}
+  .dif-item{grid-template-columns:1fr;gap:12px;padding:32px 24px}
+  .dif-num{font-size:1.6rem}
+  .gallery{grid-template-rows:200px 200px 200px}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     SVG SPRITE
+════════════════════════════════════════ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-wpp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></symbol>
+  <symbol id="i-img" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></symbol>
+  <symbol id="i-email" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></symbol>
+</svg>
+
+<!-- ═══════════════════════════════════════
+     NAV
+════════════════════════════════════════ -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="#hero" class="nav-brand">
+      <!-- Shield inline SVG -->
+      <svg width="36" height="40" viewBox="0 0 200 230" fill="none">
+        <path d="M100 4L192 40V116C192 160 150 200 100 226C50 200 8 160 8 116V40L100 4Z" fill="url(#ng1)" stroke="url(#ng2)" stroke-width="2.5"/>
+        <defs>
+          <linearGradient id="ng1" x1="100" y1="4" x2="100" y2="226" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#d4aa52"/><stop offset="100%" stop-color="#8a6b25"/></linearGradient>
+          <linearGradient id="ng2" x1="100" y1="4" x2="100" y2="226" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#e8c870"/><stop offset="100%" stop-color="#6a5018"/></linearGradient>
+        </defs>
+        <line x1="100" y1="65" x2="100" y2="122" stroke="#0d0d0d" stroke-width="7"/>
+        <circle cx="100" cy="65" r="10" fill="#0d0d0d"/>
+        <line x1="62" y1="90" x2="138" y2="90" stroke="#0d0d0d" stroke-width="6"/>
+        <line x1="62" y1="90" x2="46" y2="118" stroke="#0d0d0d" stroke-width="5"/>
+        <line x1="138" y1="90" x2="154" y2="118" stroke="#0d0d0d" stroke-width="5"/>
+        <rect x="38" y="114" width="30" height="12" rx="6" fill="#0d0d0d"/>
+        <rect x="132" y="114" width="30" height="12" rx="6" fill="#0d0d0d"/>
+        <text x="100" y="180" text-anchor="middle" font-family="Georgia,serif" font-size="46" font-weight="700" fill="#0d0d0d" letter-spacing="4">BR</text>
+      </svg>
+      <div class="nav-brand-text">BR Advogados <small>Associados</small></div>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="#areas">Atuação</a></li>
+      <li><a href="#sobre">O Advogado</a></li>
+      <li><a href="#diferenciais">Escritório</a></li>
+      <li><a href="#video">Institucional</a></li>
+      <li><a href="https://wa.me/553534152017" target="_blank" rel="noopener" class="btn btn-gold nav-cta">
+        <svg width="14" height="14" fill="currentColor"><use href="#i-wpp"/></svg>
+        WhatsApp
+      </a></li>
+    </ul>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile overlay -->
+<div class="mob-overlay" id="mobNav">
+  <button class="mob-close" id="mobClose">&#x2715;</button>
+  <a href="#areas"        class="mob-link">Áreas de Atuação</a>
+  <a href="#sobre"        class="mob-link">Biovane Ribeiro</a>
+  <a href="#diferenciais" class="mob-link">Diferenciais</a>
+  <a href="#estrutura"    class="mob-link">Escritório</a>
+  <a href="https://wa.me/553534152017" target="_blank" class="mob-link">WhatsApp</a>
+  <p class="mob-sub">OAB/SP 350.938 · OAB/MG 162.402</p>
+</div>
+
+<!-- ═══════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow r">
+      <span class="rule-gold"></span>
+      <span class="label">Direito Previdenciário &amp; Social</span>
+    </div>
+    <h1 class="hero-h1 r d1">
+      Defesa jurídica<br/>com <em>seriedade,</em><br/>estratégia<br/>e presença.
+    </h1>
+    <p class="hero-sub r d2">Atendimento jurídico com clareza, estrutura e compromisso real com o seu caso. Desde São Lourenço, para todo o Brasil.</p>
+    <div class="hero-btns r d3">
+      <a href="https://wa.me/553534152017?text=Olá, gostaria de agendar um atendimento." target="_blank" rel="noopener" class="btn btn-gold">
+        <svg width="16" height="16" fill="currentColor"><use href="#i-wpp"/></svg>
+        Falar no WhatsApp
+      </a>
+      <a href="#sobre" class="btn btn-outline">Conhecer o escritório</a>
+    </div>
+    <div class="hero-stats r d4">
+      <div>
+        <div class="stat-num">2</div>
+        <div class="stat-label">Registros OAB</div>
+      </div>
+      <div>
+        <div class="stat-num">SP · MG</div>
+        <div class="stat-label">Estados de atuação</div>
+      </div>
+      <div>
+        <div class="stat-num">+10</div>
+        <div class="stat-label">Anos de experiência</div>
+      </div>
+    </div>
+    <div class="scroll-hint r d5">
+      <span class="scroll-line"></span>
+      <span>Rolar</span>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <!--
+      IMAGEM: hero-advogado.jpg
+      Foto principal do Dr. Biovane Ribeiro em postura formal.
+      Dimensão sugerida: 900×1200px ou superior, portrait.
+    -->
+    <div class="img-placeholder" style="width:100%;height:100%">
+      <svg width="56" height="56" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>hero-advogado.jpg</span>
+    </div>
+    <div class="hero-photo-overlay"></div>
+    <div class="oab-badge r-right d4">
+      <span class="label">Inscrições</span>
+      <p>OAB/SP 350.938<br/>OAB/MG 162.402</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     MARQUEE
+════════════════════════════════════════ -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-inner">
+    <span>Direito Previdenciário</span>
+    <span>Direito Social</span>
+    <span>Aposentadoria</span>
+    <span>Revisão de Benefícios</span>
+    <span>BPC / LOAS</span>
+    <span>Planejamento Previdenciário</span>
+    <span>Auxílio-Doença</span>
+    <span>Pensão por Morte</span>
+    <!-- repeat for seamless loop -->
+    <span>Direito Previdenciário</span>
+    <span>Direito Social</span>
+    <span>Aposentadoria</span>
+    <span>Revisão de Benefícios</span>
+    <span>BPC / LOAS</span>
+    <span>Planejamento Previdenciário</span>
+    <span>Auxílio-Doença</span>
+    <span>Pensão por Morte</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     AUTORIDADE
+════════════════════════════════════════ -->
+<section id="autoridade">
+  <div class="wrap">
+    <div class="auto-grid">
+      <div class="auto-left">
+        <span class="label r">O Escritório</span>
+        <h2 class="auto-h2 r d1">Um escritório com <em>estrutura,<br/>presença</em> e compromisso.</h2>
+        <p class="auto-text r d2">
+          A BR Advogados Associados está sediada em São Lourenço, Minas Gerais, com escritório físico, equipe própria e estrutura pensada para oferecer atendimento de alto nível. Cada caso é conduzido com responsabilidade técnica, estratégia personalizada e comunicação clara — porque nosso comprometimento não termina na assinatura do contrato.
+        </p>
+        <p class="auto-text r d3">
+          Com registro na OAB de São Paulo e de Minas Gerais, o escritório atua em todo o território nacional, com especialização em Direito Previdenciário e Direito Social.
+        </p>
+        <div class="auto-credentials r d4">
+          <div class="cred-item">
+            <span class="label">Sede</span>
+            <p>São Lourenço, MG</p>
+          </div>
+          <div class="cred-item">
+            <span class="label">Formação</span>
+            <p>Universidade Presbiteriana Mackenzie</p>
+          </div>
+          <div class="cred-item">
+            <span class="label">OAB/SP</span>
+            <p>350.938</p>
+          </div>
+          <div class="cred-item">
+            <span class="label">OAB/MG</span>
+            <p>162.402</p>
+          </div>
+        </div>
+      </div>
+      <div class="auto-right r-right">
+        <div class="img-offset-badge">
+          <strong>+10</strong>
+          <span>anos atuando</span>
+        </div>
+        <div class="img-frame">
+          <!--
+            IMAGEM: escritorio-fachada.jpg
+            Foto externa ou interna do escritório.
+            Dimensão sugerida: 800×1000px, retrato.
+          -->
+          <div class="img-placeholder">
+            <svg width="40" height="40" fill="currentColor" viewBox="0 0 24 24"><use href="#i-img"/></svg>
+            <span>escritorio-fachada.jpg</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     ÁREAS DE ATUAÇÃO
+════════════════════════════════════════ -->
+<section id="areas">
+  <div class="wrap">
+    <div class="areas-header">
+      <div>
+        <span class="label r">Áreas de Atuação</span>
+        <h2 class="areas-h2 r d1">Cada caso<br/>conduzido com <em>precisão.</em></h2>
+      </div>
+      <p class="areas-desc r d2">Especialização técnica e experiência prática para atender cada situação previdenciária com a profundidade que ela merece.</p>
+    </div>
+    <div class="areas-grid">
+
+      <div class="area-card r">
+        <div class="area-num">01</div>
+        <div class="area-icon">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <h3 class="area-title">Direito Previdenciário</h3>
+        <p class="area-text">Concessão, revisão e recursos de benefícios junto ao INSS. Aposentadorias por idade, tempo de contribuição, invalidez e especial. Representação técnica em todas as instâncias.</p>
+        <span class="servico-link" style="display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);opacity:0;transform:translateX(-6px);transition:opacity .3s,transform .3s">
+          Saber mais <svg width="14" height="14" fill="currentColor"><use href="#i-arrow"/></svg>
+        </span>
+      </div>
+
+      <div class="area-card r d1">
+        <div class="area-num">02</div>
+        <div class="area-icon">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+        </div>
+        <h3 class="area-title">Direito Social</h3>
+        <p class="area-text">Defesa dos direitos sociais fundamentais de trabalhadores e cidadãos. Análise criteriosa de cada situação para garantir o acesso ao que a lei determina.</p>
+        <span class="servico-link" style="display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);opacity:0;transform:translateX(-6px);transition:opacity .3s,transform .3s">
+          Saber mais <svg width="14" height="14" fill="currentColor"><use href="#i-arrow"/></svg>
+        </span>
+      </div>
+
+      <div class="area-card r d2">
+        <div class="area-num">03</div>
+        <div class="area-icon">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.65 6.35A7.958 7.958 0 0 0 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>
+        </div>
+        <h3 class="area-title">Revisão de Benefícios</h3>
+        <p class="area-text">Identificação de erros no cálculo do benefício e atuação para correção com pagamento retroativo em até 10 anos. Análise documental detalhada e estratégia definida.</p>
+        <span class="servico-link" style="display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);opacity:0;transform:translateX(-6px);transition:opacity .3s,transform .3s">
+          Saber mais <svg width="14" height="14" fill="currentColor"><use href="#i-arrow"/></svg>
+        </span>
+      </div>
+
+      <div class="area-card r">
+        <div class="area-num">04</div>
+        <div class="area-icon">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+        </div>
+        <h3 class="area-title">BPC / LOAS</h3>
+        <p class="area-text">Benefício de Prestação Continuada para idosos e pessoas com deficiência. Requerimento, recursos administrativos e representação judicial em casos de negativa injusta.</p>
+        <span class="servico-link" style="display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);opacity:0;transform:translateX(-6px);transition:opacity .3s,transform .3s">
+          Saber mais <svg width="14" height="14" fill="currentColor"><use href="#i-arrow"/></svg>
+        </span>
+      </div>
+
+      <div class="area-card r d1">
+        <div class="area-num">05</div>
+        <div class="area-icon">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99l1.5 1.5z"/></svg>
+        </div>
+        <h3 class="area-title">Planejamento Previdenciário</h3>
+        <p class="area-text">Estratégia personalizada para antecipar a melhor data de aposentadoria, aumentar o valor do benefício e garantir a proteção previdenciária da família.</p>
+        <span class="servico-link" style="display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);opacity:0;transform:translateX(-6px);transition:opacity .3s,transform .3s">
+          Saber mais <svg width="14" height="14" fill="currentColor"><use href="#i-arrow"/></svg>
+        </span>
+      </div>
+
+      <div class="area-card r d2">
+        <div class="area-num">06</div>
+        <div class="area-icon">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+        </div>
+        <h3 class="area-title">Atendimento Consultivo</h3>
+        <p class="area-text">Consultas para análise de situação previdenciária, orientação sobre direitos e riscos, sem a necessidade de abertura imediata de processo. Clareza antes de qualquer decisão.</p>
+        <span class="servico-link" style="display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);opacity:0;transform:translateX(-6px);transition:opacity .3s,transform .3s">
+          Saber mais <svg width="14" height="14" fill="currentColor"><use href="#i-arrow"/></svg>
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SOBRE — ADVOGADO
+════════════════════════════════════════ -->
+<section id="sobre">
+  <div class="sobre-grid">
+    <div class="sobre-photo-col r-left">
+      <div class="img-frame" style="height:100%;aspect-ratio:auto;border:none;border-right:1px solid var(--rule);">
+        <!--
+          IMAGEM: advogado-retrato.jpg
+          Foto formal do Dr. Biovane Ribeiro, de corpo inteiro ou meia figura.
+          Dimensão sugerida: 700×900px ou superior.
+        -->
+        <div class="img-placeholder" style="height:100%;min-height:560px">
+          <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>advogado-retrato.jpg</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sobre-text-col">
+      <span class="label r">O Advogado</span>
+      <h2 class="sobre-name r d1">Biovane<br/><em>Ribeiro</em></h2>
+      <p class="sobre-title r d2">Advogado · OAB/SP 350.938 · OAB/MG 162.402</p>
+      <div class="sobre-divider r d2"></div>
+      <p class="sobre-bio r d3">
+        Graduado pela <strong>Universidade Presbiteriana Mackenzie</strong>, Biovane Ribeiro construiu sua trajetória com foco em Direito Previdenciário e Direito Social — áreas que exigem ao mesmo tempo domínio técnico e sensibilidade humana.<br/><br/>
+        Com registro ativo nas seccionais da OAB de São Paulo e Minas Gerais, atua em casos de todo o Brasil a partir do escritório físico em <strong>São Lourenço (MG)</strong>. Cada caso é tratado de forma individual, com estratégia própria e acompanhamento direto.
+      </p>
+      <div class="sobre-tags r d4">
+        <span class="tag">Direito Previdenciário</span>
+        <span class="tag">Direito Social</span>
+        <span class="tag">Planejamento Previdenciário</span>
+        <span class="tag">OAB/SP · OAB/MG</span>
+        <span class="tag">Mackenzie</span>
+      </div>
+      <blockquote class="sobre-quote r d5">
+        "Cada caso é único. Tratamos assim desde o primeiro atendimento até a resolução final."
+      </blockquote>
+      <div style="margin-top:36px" class="r d5">
+        <a href="https://wa.me/553534152017" target="_blank" rel="noopener" class="btn btn-gold">
+          <svg width="16" height="16" fill="currentColor"><use href="#i-wpp"/></svg>
+          Falar com Dr. Biovane
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     DIFERENCIAIS
+════════════════════════════════════════ -->
+<section id="diferenciais">
+  <div class="wrap">
+    <div class="dif-header">
+      <span class="label r">Por que nos escolher</span>
+      <h2 class="dif-h2 r d1">O padrão que <em>diferencia</em><br/>cada atendimento.</h2>
+    </div>
+    <div class="dif-list">
+
+      <div class="dif-item r">
+        <div class="dif-num">01</div>
+        <div class="dif-content">
+          <h3>Estratégia individual para cada caso</h3>
+          <p>Não existe solução padrão em Direito Previdenciário. Cada situação tem sua particularidade — e é assim que tratamos. Análise individual, estratégia definida e execução técnica.</p>
+        </div>
+      </div>
+
+      <div class="dif-item r d1">
+        <div class="dif-num">02</div>
+        <div class="dif-content">
+          <h3>Estrutura física e equipe própria</h3>
+          <p>Escritório físico em São Lourenço com equipe dedicada. Atendimento presencial, remoto ou híbrido — com a mesma seriedade em qualquer modalidade.</p>
+        </div>
+      </div>
+
+      <div class="dif-item r d1">
+        <div class="dif-num">03</div>
+        <div class="dif-content">
+          <h3>Comunicação clara e direta</h3>
+          <p>Sem termos jurídicos desnecessários. Explicamos cada etapa, cada decisão e cada prazo com clareza — porque você precisa entender o que está acontecendo com o seu caso.</p>
+        </div>
+      </div>
+
+      <div class="dif-item r d2">
+        <div class="dif-num">04</div>
+        <div class="dif-content">
+          <h3>Ética e responsabilidade em cada etapa</h3>
+          <p>Assumimos apenas os compromissos que podemos cumprir. Trabalhamos com seriedade, dentro dos limites éticos da profissão, sem promessas vazias ou atalhos inadequados.</p>
+        </div>
+      </div>
+
+      <div class="dif-item r d2">
+        <div class="dif-num">05</div>
+        <div class="dif-content">
+          <h3>Atuação em SP e MG com alcance nacional</h3>
+          <p>Registros ativos nas duas seccionais permitem atuação ampla. Atendemos clientes de qualquer estado com suporte remoto completo e representação técnica qualificada.</p>
+        </div>
+      </div>
+
+      <div class="dif-item r d3">
+        <div class="dif-num">06</div>
+        <div class="dif-content">
+          <h3>Presença forte e acompanhamento real</h3>
+          <p>O advogado acompanha pessoalmente os casos. Não terceirizamos a relação com o cliente. Quando você liga ou escreve, você fala com quem realmente conduz o seu processo.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     VÍDEO INSTITUCIONAL
+════════════════════════════════════════ -->
+<section id="video">
+  <div class="wrap">
+    <div class="video-inner">
+      <div class="video-text">
+        <span class="label r">Institucional</span>
+        <h2 class="video-h2 r d1">Conheça o escritório<br/>além do <em>texto.</em></h2>
+        <p class="video-sub r d2">Assista ao vídeo institucional e entenda como trabalhamos, quem somos e o que nos diferencia no atendimento previdenciário.</p>
+        <a href="https://wa.me/553534152017" target="_blank" rel="noopener" class="btn btn-outline r d3">
+          <svg width="16" height="16" fill="currentColor"><use href="#i-wpp"/></svg>
+          Falar com a equipe
+        </a>
+      </div>
+      <div class="r-right d2">
+        <div class="video-frame video-corner" id="videoBox">
+          <!--
+            VÍDEO: Substituir VIDEO_ID_YOUTUBE pelo ID do vídeo do YouTube.
+            Exemplo: se a URL for https://youtu.be/abc123, o ID é abc123.
+          -->
+          <iframe
+            id="ytFrame"
+            src=""
+            data-src="https://www.youtube.com/embed/VIDEO_ID_YOUTUBE?autoplay=1&rel=0"
+            title="BR Advogados — Vídeo Institucional"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="display:none;width:100%;height:100%;border:none"
+          ></iframe>
+          <div class="video-thumb" id="videoThumb">
+            <!--
+              IMAGEM: video-thumb.jpg
+              Thumbnail do vídeo. Dimensão: 1280×720px.
+            -->
+            <div style="width:100%;height:100%;background:var(--ink3);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px">
+              <span class="label" style="color:var(--muted)">Vídeo Institucional</span>
+              <button class="play-btn" id="playBtn" aria-label="Reproduzir vídeo">
+                <svg width="28" height="28" fill="currentColor"><use href="#i-play"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     ESTRUTURA / EQUIPE / ESCRITÓRIO
+════════════════════════════════════════ -->
+<section id="estrutura">
+  <div class="wrap wrap--wide">
+    <div class="wrap">
+      <div class="estrutura-header">
+        <span class="label r">Estrutura &amp; Equipe</span>
+        <h2 class="estrutura-h2 r d1">Presença física.<br/><em>Equipe dedicada.</em></h2>
+      </div>
+    </div>
+    <div class="gallery">
+      <!--
+        GALERIA DE IMAGENS — substitua os placeholders pelas imagens reais.
+        Nomes sugeridos abaixo de cada item.
+      -->
+      <div class="gal-item">
+        <!-- IMAGEM: galeria-escritorio-interno.jpg — Ambiente interno do escritório -->
+        <div class="gal-placeholder">
+          <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><use href="#i-img"/></svg>
+          <span>galeria-escritorio-interno.jpg</span>
+        </div>
+        <div class="gal-overlay"></div>
+      </div>
+      <div class="gal-item">
+        <!-- IMAGEM: galeria-advogado-mesa.jpg — Dr. Biovane em seu escritório -->
+        <div class="gal-placeholder">
+          <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><use href="#i-img"/></svg>
+          <span>galeria-advogado-mesa.jpg</span>
+        </div>
+        <div class="gal-overlay"></div>
+      </div>
+      <div class="gal-item">
+        <!-- IMAGEM: galeria-fachada.jpg — Fachada externa do escritório -->
+        <div class="gal-placeholder">
+          <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><use href="#i-img"/></svg>
+          <span>galeria-fachada.jpg</span>
+        </div>
+        <div class="gal-overlay"></div>
+      </div>
+      <div class="gal-item">
+        <!-- IMAGEM: galeria-equipe.jpg — Foto da equipe completa -->
+        <div class="gal-placeholder">
+          <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><use href="#i-img"/></svg>
+          <span>galeria-equipe.jpg</span>
+        </div>
+        <div class="gal-overlay"></div>
+      </div>
+      <div class="gal-item">
+        <!-- IMAGEM: galeria-atendimento.jpg — Sala de atendimento ao cliente -->
+        <div class="gal-placeholder">
+          <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><use href="#i-img"/></svg>
+          <span>galeria-atendimento.jpg</span>
+        </div>
+        <div class="gal-overlay"></div>
+      </div>
+      <div class="gal-item">
+        <!-- IMAGEM: galeria-detalhe.jpg — Detalhe do ambiente ou logo -->
+        <div class="gal-placeholder">
+          <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><use href="#i-img"/></svg>
+          <span>galeria-detalhe.jpg</span>
+        </div>
+        <div class="gal-overlay"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CTA FINAL
+════════════════════════════════════════ -->
+<section id="cta-final">
+  <div class="wrap wrap--narrow" style="position:relative;z-index:1;text-align:center">
+    <span class="label cta-label r">Próximo Passo</span>
+    <h2 class="cta-h2 r d1">Fale com nossa equipe<br/>e entenda o melhor caminho<br/>para o <em>seu caso.</em></h2>
+    <p class="cta-sub r d2">Atendimento direto, sem burocracia desnecessária. Vamos analisar sua situação com seriedade e indicar o caminho mais adequado.</p>
+    <div class="cta-btns r d3">
+      <a href="https://wa.me/553534152017?text=Olá, gostaria de agendar um atendimento jurídico." target="_blank" rel="noopener" class="btn btn-gold">
+        <svg width="16" height="16" fill="currentColor"><use href="#i-wpp"/></svg>
+        Falar no WhatsApp
+      </a>
+      <a href="tel:+553534152017" class="btn btn-outline">
+        <svg width="16" height="16" fill="currentColor"><use href="#i-phone"/></svg>
+        (35) 3415-2017
+      </a>
+    </div>
+    <div class="cta-info r d4">
+      <div class="cta-info-item">
+        <span class="label">Endereço</span>
+        <p>Av. Antônio Junqueira de Souza, 253<br/>Loja A · Centro · São Lourenço, MG</p>
+      </div>
+      <div class="cta-info-item">
+        <span class="label">Instagram</span>
+        <p>@br_advogados_associados</p>
+      </div>
+      <div class="cta-info-item">
+        <span class="label">Horário</span>
+        <p>Seg – Sex · 08h às 18h</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:12px">
+          <svg width="30" height="34" viewBox="0 0 200 230" fill="none">
+            <path d="M100 4L192 40V116C192 160 150 200 100 226C50 200 8 160 8 116V40L100 4Z" fill="url(#fg1)" stroke="#8a6b25" stroke-width="2"/>
+            <defs><linearGradient id="fg1" x1="100" y1="4" x2="100" y2="226" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#d4aa52"/><stop offset="100%" stop-color="#7a5e1a"/></linearGradient></defs>
+            <line x1="100" y1="65" x2="100" y2="122" stroke="#0d0d0d" stroke-width="7"/>
+            <circle cx="100" cy="65" r="10" fill="#0d0d0d"/>
+            <line x1="62" y1="90" x2="138" y2="90" stroke="#0d0d0d" stroke-width="6"/>
+            <line x1="62" y1="90" x2="46" y2="118" stroke="#0d0d0d" stroke-width="5"/>
+            <line x1="138" y1="90" x2="154" y2="118" stroke="#0d0d0d" stroke-width="5"/>
+            <rect x="38" y="114" width="30" height="12" rx="6" fill="#0d0d0d"/>
+            <rect x="132" y="114" width="30" height="12" rx="6" fill="#0d0d0d"/>
+            <text x="100" y="180" text-anchor="middle" font-family="Georgia,serif" font-size="46" font-weight="700" fill="#0d0d0d" letter-spacing="4">BR</text>
+          </svg>
+          <div style="font-family:var(--ff-disp);font-size:1rem;font-weight:500;line-height:1.15">
+            BR Advogados<br/><small style="font-family:var(--ff-body);font-size:.6rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)">Associados</small>
+          </div>
+        </div>
+        <p>Escritório de advocacia especializado em Direito Previdenciário e Social. Atendimento com seriedade, técnica e comprometimento em São Lourenço, MG.</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/br_advogados_associados" target="_blank" rel="noopener" class="fsoc" aria-label="Instagram">
+            <svg width="14" height="14" fill="currentColor"><use href="#i-instagram"/></svg>
+          </a>
+          <a href="https://wa.me/553534152017" target="_blank" rel="noopener" class="fsoc" aria-label="WhatsApp">
+            <svg width="14" height="14" fill="currentColor"><use href="#i-wpp"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atuação</h4>
+        <ul>
+          <li><a href="#areas">Direito Previdenciário</a></li>
+          <li><a href="#areas">Direito Social</a></li>
+          <li><a href="#areas">Revisão de Benefícios</a></li>
+          <li><a href="#areas">BPC / LOAS</a></li>
+          <li><a href="#areas">Planejamento Previdenciário</a></li>
+          <li><a href="#areas">Consultoria</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>O Escritório</h4>
+        <ul>
+          <li><a href="#sobre">Dr. Biovane Ribeiro</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#estrutura">Equipe</a></li>
+          <li><a href="#video">Institucional</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li>
+            <span>
+              <svg width="13" height="13" fill="currentColor" style="color:var(--gold);flex-shrink:0"><use href="#i-phone"/></svg>
+              (35) 3415-2017
+            </span>
+          </li>
+          <li>
+            <span>
+              <svg width="13" height="13" fill="currentColor" style="color:var(--gold);flex-shrink:0"><use href="#i-map"/></svg>
+              Av. A. Junqueira de Souza, 253 — Loja A, São Lourenço, MG
+            </span>
+          </li>
+          <li>
+            <span>
+              <svg width="13" height="13" fill="currentColor" style="color:var(--gold);flex-shrink:0"><use href="#i-instagram"/></svg>
+              @br_advogados_associados
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 BR Advogados Associados. Todos os direitos reservados.</p>
+      <p class="footer-oab">OAB/SP 350.938 · OAB/MG 162.402 · Dr. Biovane Ribeiro</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════
+     WPP FLOAT
+════════════════════════════════════════ -->
+<div id="wpp">
+  <span class="wpp-tip">Fale com nossa equipe</span>
+  <a href="https://wa.me/553534152017?text=Olá, gostaria de agendar um atendimento." target="_blank" rel="noopener" class="wpp-circle" aria-label="WhatsApp">
+    <svg width="24" height="24" fill="white"><use href="#i-wpp"/></svg>
+    <span class="wpp-ring"></span>
+  </a>
+</div>
+
+<!-- ═══════════════════════════════════════
+     JS
+════════════════════════════════════════ -->
+<script>
+/* NAV scroll */
+const nav = document.getElementById('nav');
+let lastY = 0;
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('stuck', scrollY > 50);
+  lastY = scrollY;
+}, { passive: true });
+
+/* Mobile nav */
+const burger  = document.getElementById('burger');
+const mobNav  = document.getElementById('mobNav');
+const mobClose = document.getElementById('mobClose');
+burger.addEventListener('click', () => mobNav.classList.add('open'));
+mobClose.addEventListener('click', () => mobNav.classList.remove('open'));
+document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', () => mobNav.classList.remove('open')));
+
+/* Reveal on scroll */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.r,.r-left,.r-right').forEach(el => io.observe(el));
+/* Hero immediate */
+window.addEventListener('load', () => {
+  document.querySelectorAll('#hero .r, #hero .r-left, #hero .r-right').forEach(el => el.classList.add('in'));
+});
+
+/* Area cards hover link */
+document.querySelectorAll('.area-card').forEach(c => {
+  const lnk = c.querySelector('.servico-link');
+  if(!lnk) return;
+  c.addEventListener('mouseenter', () => { lnk.style.opacity='1'; lnk.style.transform='translateX(0)'; });
+  c.addEventListener('mouseleave', () => { lnk.style.opacity='0'; lnk.style.transform='translateX(-6px)'; });
+});
+
+/* Video play */
+const playBtn   = document.getElementById('playBtn');
+const videoThumb = document.getElementById('videoThumb');
+const ytFrame   = document.getElementById('ytFrame');
+if(playBtn) {
+  playBtn.addEventListener('click', () => {
+    ytFrame.src = ytFrame.dataset.src;
+    ytFrame.style.display = 'block';
+    videoThumb.classList.add('hidden');
+  });
+}
+
+/* Active nav link highlight */
+const sections = document.querySelectorAll('section[id]');
+const navLinks  = document.querySelectorAll('.nav-menu a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if(scrollY >= s.offsetTop - 120) current = s.id; });
+  navLinks.forEach(a => {
+    a.style.color = a.getAttribute('href') === '#'+current ? 'var(--white)' : '';
+  });
+}, { passive: true });
+</script>
+</body>
+</html>
